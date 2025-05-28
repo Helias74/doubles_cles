@@ -1,22 +1,51 @@
-/* AccueilSection.css */
-
 .accueil-section {
-  padding: 4rem 5rem;
+  padding: 0 0 4rem 6rem;
   text-align: left;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
 }
 
+.accueil-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.trapeze {
+  background-color: #7BAFDA;
+  color: white;
+  width: 45vw;
+  max-width: 1000px;
+  height: 55vw;
+  max-height: 1000px;
+  min-height: 300px;
+  clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.accueil-contenu {
+  padding: 11vw 0 4rem 4vw; /* haut droite bas gauche */
+  flex: 1;
+  min-width: 280px;
+}
+
 .accueil-section h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   text-align: left;
   font-weight: bold;
-  color: #222; /* Couleur par défaut */
+  font-style: italic;
+  line-height: 1.2;
 }
 
 .ligne-haut-slogan {
-  padding: 0rem 5rem;  
+  padding: 0rem 5vw;
   display: inline-block;
   color: #545454;
 }
@@ -26,9 +55,50 @@
   color: #7BAFDA;
 }
 
+.point-slogan {
+  color: #545454;
+}
+
 .accueil-section p {
   font-size: 1.25rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
+  color: #B6B6B6;
+  max-width: 50%;
+  margin: 0 0 1rem 0;
 }
+
+.hilight-description {
+  color: #7BAFDA;
+}
+
+.btn-rdv, .en-savoir-plus {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-rdv {
+  background-color: #7BAFDA;
+  color: white;
+  border: none;
+}
+
+.btn-rdv:hover {
+  background-color: #0E2846;
+}
+
+.en-savoir-plus {
+  color: #7BAFDA;
+  border: none;
+  background: none;
+}
+
+.en-savoir-plus:hover {
+  color: #0E2846;
+}
+
