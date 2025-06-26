@@ -31,6 +31,7 @@
 
 .accueil-contenu {
   padding: 11vw 0 4rem 4vw; /* haut droite bas gauche */
+  margin-left: -2vw;
   flex: 1;
   min-width: 280px;
 }
@@ -62,7 +63,7 @@
 .accueil-section p {
   font-size: 1.25rem;
   color: #B6B6B6;
-  max-width: 50%;
+  max-width: 70%;
   margin: 0 0 1rem 0;
 }
 

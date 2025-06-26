@@ -1,8 +1,20 @@
-import './Header.css'
+import './Header.css';
+import { useEffect, useState } from 'react';
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 5);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'transparent' : ''}`}>
       <h1 className="logo">
         <a href="#accueil">DoubleAuto</a>
       </h1>
@@ -15,7 +27,7 @@ function Header() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;

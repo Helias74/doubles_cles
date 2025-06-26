@@ -1,27 +1,45 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Assure qu'il reste au-dessus */
+  background-color: transparent;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #222;
   color: white;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, opacity 0.3s ease;
 }
 
+
+.header.transparent {
+  background-color: rgb(255, 255, 255);
+  opacity: 1; /* optionnel si tu veux animer aussi l’opacité */
+}
+
+/* Appliquer l'effet seulement sur le logo */
 .logo a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.header.transparent .logo a {
+  opacity: 0.6; /* le logo devient semi-transparent */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.3rem;
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
