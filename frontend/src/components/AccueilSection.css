@@ -1,52 +1,43 @@
+/* SECTION PRINCIPALE */
 .accueil-section {
-  padding: 0 0 4rem 6rem;
-  text-align: left;
-  background-color: #ffffff;
+  background-image: url("../assets/images/blob.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 8vw 5vw;
+  text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
+/* CONTAINER FLEX */
 .accueil-container {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.trapeze {
-  background-color: #7BAFDA;
-  color: white;
-  width: 45vw;
-  max-width: 1000px;
-  height: 55vw;
-  max-height: 1000px;
-  min-height: 300px;
-  clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  padding: 1rem;
+/* CONTENU */
+.accueil-contenu {
+  padding: 4vw 0;
+  min-width: 280px;
+  width: 100%;
   box-sizing: border-box;
 }
 
-.accueil-contenu {
-  padding: 11vw 0 4rem 4vw; /* haut droite bas gauche */
-  margin-left: -2vw;
-  flex: 1;
-  min-width: 280px;
-}
-
+/* TITRE */
 .accueil-section h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  text-align: left;
   font-weight: bold;
-  font-style: italic;
   line-height: 1.2;
 }
 
+/* SLOGANS */
 .ligne-haut-slogan {
-  padding: 0rem 5vw;
+  padding: 0 5vw;
   display: inline-block;
   color: #545454;
 }
@@ -60,18 +51,23 @@
   color: #545454;
 }
 
+/* PARAGRAPHE */
 .accueil-section p {
   font-size: 1.25rem;
   color: #B6B6B6;
   max-width: 70%;
-  margin: 0 0 1rem 0;
+  margin: 0 auto 1rem auto;
+  text-align: center;
 }
 
+/* TEXTE EN SURBRILLANCE */
 .hilight-description {
   color: #7BAFDA;
 }
 
-.btn-rdv, .en-savoir-plus {
+/* BOUTONS */
+.btn-rdv,
+.en-savoir-plus {
   display: inline-block;
   font-weight: bold;
   margin-top: 1rem;
@@ -103,3 +99,52 @@
   color: #0E2846;
 }
 
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablette */
+@media (max-width: 992px) {
+  .accueil-section {
+    padding: 10vw 4vw;
+  }
+
+  .accueil-section h1 {
+    font-size: 2.8rem;
+  }
+
+  .accueil-section p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .accueil-section {
+    padding: 12vw 3vw;
+  }
+
+  .accueil-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .ligne-haut-slogan {
+    padding: 0 2vw;
+  }
+
+  .accueil-section p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .btn-rdv,
+  .en-savoir-plus {
+    width: 60%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .accueil-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

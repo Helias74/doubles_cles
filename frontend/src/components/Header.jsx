@@ -20,7 +20,7 @@ function Header() {
       </h1>
       <nav>
         <ul className="nav-links">
-          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#accueil" className="accueil-link">Accueil</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#reservation">Réservation</a></li>
           <li><a href="#contact">Contact</a></li>

@@ -17,9 +17,6 @@ function AccueilSection() {
           <a href="#reservation" className="btn-rdv">Prendre un RDV</a>
           <a href="#services" className="en-savoir-plus">En savoir plus</a>
         </div>
-        <div className="trapeze">
-          <h2>Contenu du trapèze</h2>
-        </div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 1000; /* Assure qu'il reste au-dessus */
   background-color: transparent;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,10 +13,10 @@
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease, opacity 0.3s ease;
 }
 
-
+/*Header après déffilement*/
 .header.transparent {
   background-color: rgb(255, 255, 255);
-  opacity: 1; /* optionnel si tu veux animer aussi l’opacité */
+  opacity: 1;
 }
 
 /* Appliquer l'effet seulement sur le logo */
@@ -39,10 +39,24 @@
 }
 
 .nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a.accueil-link {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.header.transparent .nav-links a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 .nav-links a.active {
+  color: rgb(0, 0, 0);
   text-decoration: underline;
 }
