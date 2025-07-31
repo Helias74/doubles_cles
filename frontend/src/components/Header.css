@@ -15,14 +15,16 @@
 
 /*Header après déffilement*/
 .header.transparent {
-  background-color: rgb(255, 255, 255);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Appliquer l'effet seulement sur le logo */
+/* Appliquer l'effet seulement sur le logo -> à changer quand vrai logo */
 .logo a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #3e3e3e;
   font-weight: bold;
   font-size: 1.5rem;
   transition: opacity 0.3s ease;
@@ -39,24 +41,60 @@
 }
 
 .nav-links a {
-  color: white;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   text-decoration: none;
-  transition: color 0.3s;
+  color: #3e3e3e;
+  padding: 0.5rem 1rem;
 }
 
 .nav-links a.accueil-link {
-  color: #000000;
+  color: #3e3e3e;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 
 .header.transparent .nav-links a {
-  color: rgb(0, 0, 0);
+  color: #3e3e3e;
   text-decoration: none;
 }
 
-.nav-links a.active {
-  color: rgb(0, 0, 0);
-  text-decoration: underline;
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #3e3e3e;
+  cursor: pointer;
+  margin-left: auto; 
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
 }

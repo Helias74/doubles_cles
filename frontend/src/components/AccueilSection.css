@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding: 8vw 5vw;
+  padding: clamp(6rem, 10vw, 12rem) clamp(2rem, 7vw, 6rem);
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
@@ -16,12 +16,12 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: clamp(1rem, 5vw, 4rem);
 }
 
 /* CONTENU */
 .accueil-contenu {
-  padding: 4vw 0;
+  padding: clamp(2rem, 4vw, 6rem) 0;
   min-width: 280px;
   width: 100%;
   box-sizing: border-box;
@@ -29,7 +29,7 @@
 
 /* TITRE */
 .accueil-section h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 6vw, 4rem);
   margin-bottom: 1rem;
   font-weight: bold;
   line-height: 1.2;
@@ -37,9 +37,9 @@
 
 /* SLOGANS */
 .ligne-haut-slogan {
-  padding: 0 5vw;
+  padding: 0 clamp(1rem, 5vw, 4rem);
   display: inline-block;
-  color: #545454;
+  color: #3e3e3e;
 }
 
 .ligne-bas-slogan {
@@ -48,13 +48,13 @@
 }
 
 .point-slogan {
-  color: #545454;
+  color: #3e3e3e;
 }
 
 /* PARAGRAPHE */
 .accueil-section p {
-  font-size: 1.25rem;
-  color: #B6B6B6;
+  font-size: clamp(1rem, 3.5vw, 1.8rem);
+  color: #3e3e3e;
   max-width: 70%;
   margin: 0 auto 1rem auto;
   text-align: center;
@@ -71,8 +71,8 @@
   display: inline-block;
   font-weight: bold;
   margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: clamp(0.6rem, 2.5vw, 1rem) clamp(1rem, 5vw, 2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   cursor: pointer;
   text-decoration: none;
   border-radius: 8px;
@@ -99,48 +99,16 @@
   color: #0E2846;
 }
 
-/* RESPONSIVE BREAKPOINTS */
-
-/* Tablette */
-@media (max-width: 992px) {
-  .accueil-section {
-    padding: 10vw 4vw;
-  }
-
-  .accueil-section h1 {
-    font-size: 2.8rem;
-  }
-
-  .accueil-section p {
-    font-size: 1.1rem;
-    max-width: 90%;
-  }
-}
-
-/* Mobile */
+/* RESPONSIVE */
 @media (max-width: 600px) {
-  .accueil-section {
-    padding: 12vw 3vw;
-  }
-
-  .accueil-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .ligne-haut-slogan {
-    padding: 0 2vw;
-  }
-
   .accueil-section p {
-    font-size: 1rem;
     max-width: 100%;
   }
 
   .btn-rdv,
   .en-savoir-plus {
     width: 60%;
-    padding: 1rem;
-    font-size: 1rem;
+    text-align: center;
   }
 
   .accueil-container {
