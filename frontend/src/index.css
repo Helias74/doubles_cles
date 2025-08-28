@@ -2,7 +2,10 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #ffffff;
+  background: 
+  radial-gradient(circle at top left, #aed0eb 0%, transparent 60%),
+  radial-gradient(circle at bottom right, #aed0eb 0%, transparent 60%),
+  #ffffff; 
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
