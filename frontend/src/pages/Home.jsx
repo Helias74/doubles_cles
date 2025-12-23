@@ -1,6 +1,7 @@
 import AccueilSection from '../components/AccueilSection'
 import ServicesSection from '../components/ServicesSection'
 import ReservationSection from '../components/ReservationSection'
+import ReservationForm from '../components/ReservationForm'
 import ContactSection from '../components/ContactSection'
 
 function Home() {
@@ -8,7 +9,7 @@ function Home() {
     <div>
       <section id="accueil"><AccueilSection /></section>
       <section id="services"><ServicesSection /></section>
-      <section id="reservation"><ReservationSection /></section>
+      <section id="reservationFormulaire"><ReservationForm /></section>
       <section id="contact"><ContactSection /></section>
     </div>
   );

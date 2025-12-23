@@ -5,7 +5,7 @@
   background-position: center;
   height: 100vh;
   padding-top: clamp(6rem, 10vw, 12rem);
-  padding-bottom: clamp(1rem, 2vw, 2rem);
+  padding-bottom: 0; /* Supprimé le padding-bottom */
   padding-left: clamp(2rem, 7vw, 6rem);
   padding-right: clamp(2rem, 7vw, 6rem);
   text-align: center;

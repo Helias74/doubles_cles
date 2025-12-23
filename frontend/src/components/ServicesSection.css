@@ -1,0 +1,121 @@
+/* ---- Base (desktop) ---- */
+.blocs-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 3rem 5rem; /* Réduit le padding-top de 2rem à 3rem */
+}
+
+.bloc {
+  flex: 1 1 340px;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.bloc:hover {
+  transform: translateY(-7px);
+}
+
+.bloc-titre {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #7bafda;
+}
+
+.bloc-slogan {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #3e3e3e;
+  margin-bottom: 1.25rem;
+}
+
+.bloc-description {
+  color: #3e3e3e;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ---- Tablette (max-width: 1024px) ---- */
+@media (max-width: 1024px) {
+  .blocs-section {
+    padding: 2.5rem 2rem 4rem; /* Réduit l'espace supérieur */
+    gap: 1.5rem;
+  }
+
+  .bloc {
+    padding: 2.5rem 1.5rem;
+    max-width: 420px;
+  }
+
+  .bloc-titre {
+    font-size: 1.8rem;
+  }
+
+  .bloc-slogan {
+    font-size: 1.3rem;
+  }
+
+  .bloc-description {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---- Mobile (max-width: 768px) ---- */
+@media (max-width: 768px) {
+  .blocs-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 3rem; /* Réduit de 1.5rem à 2rem en haut */
+    gap: 1.5rem;
+  }
+
+  .bloc {
+    width: 100%;
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .bloc-titre {
+    font-size: 1.6rem;
+  }
+
+  .bloc-slogan {
+    font-size: 1.2rem;
+  }
+
+  .bloc-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ---- Très petit écran (max-width: 480px) ---- */
+@media (max-width: 480px) {
+  .blocs-section {
+    padding: 1.5rem 0.5rem 2.5rem; /* Réduit de 1rem à 1.5rem en haut */
+    gap: 1rem;
+  }
+
+  .bloc {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .bloc-titre {
+    font-size: 1.4rem;
+  }
+
+  .bloc-slogan {
+    font-size: 1.1rem;
+  }
+
+  .bloc-description {
+    font-size: 0.95rem;
+  }
+}
